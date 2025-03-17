@@ -21,7 +21,10 @@ export default function Entry({
             className="location-marker"
           />
           <p className="location-country-name">{country}</p>
-          <a href={googleMapsLink} className="location-maps-link">
+          <a
+            href={googleMapsLink}
+            target="blank"
+            className="location-maps-link">
             View on Google Maps
           </a>
         </div>
