@@ -6,6 +6,13 @@ body {
   margin: 0;
   padding: 0;
 }
+:root {
+  --color-black: #0f0f0f;
+  --color-dark-text: #2b283a;
+  --color-red: #f55a5a;
+  --color-white: #f5f5f5;
+  --color-gray: #918e9b;
+}
 body {
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
@@ -15,14 +22,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0f0f0f;
+  background-color: var(--color-black);
 }
 .wrapper {
   width: 550px;
   height: 700px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--color-white);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 header {
   width: 100%;
@@ -30,7 +41,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f55a5a;
+  background-color: var(--color-red);
 }
 header nav {
   display: flex;
@@ -43,7 +54,73 @@ header img {
 }
 header h1 {
   margin: 0;
-  color: #fff;
+  color: var(--color-white);
   font-weight: 500;
   font-size: 0.9rem;
+}
+.entry-wrapper {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  color: var(--color-dark-text);
+}
+.entry-main-photo-container {
+  width: 124px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.entry-main-photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.location-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 4px;
+}
+.location-marker {
+  width: 10px;
+  height: auto;
+  margin-right: 4px;
+}
+.location-country-name,
+.location-maps-link {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 17%;
+}
+.location-country-name {
+  margin: 0;
+  margin-right: 12px;
+}
+.location-maps-link {
+  color: var(--color-gray);
+  transition: color 0.2s ease;
+}
+@media (hover: hover) {
+  .location-maps-link:hover {
+    color: var(--color-red);
+  }
+}
+.country-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.visit-dates {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.info-text {
+  font-size: 12px;
+  line-height: 150%;
+  margin: 0;
 }
