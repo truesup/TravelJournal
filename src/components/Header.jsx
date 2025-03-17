@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <nav>
         <img src={logo} alt="Journal Logo" />
-        <span>my travel journal.</span>
+        <h1>my travel journal.</h1>
       </nav>
     </header>
   )
