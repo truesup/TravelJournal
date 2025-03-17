@@ -1,5 +1,9 @@
 import Header from './components/Header'
 
 export default function App() {
-  return <Header />
+  return (
+    <div className="wrapper">
+      <Header />
+    </div>
+  )
 }
