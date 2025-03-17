@@ -1,12 +1,12 @@
 import locationMarker from '../assets/location-marker.svg'
 
-export default function Entry({ countryData }) {
+export default function Entry(props) {
   return (
     <article className="entry-wrapper">
       <div className="entry-main-photo-container">
         <img
-          src={countryData.img.src}
-          alt={countryData.img.alt}
+          src={props.img.src}
+          alt={props.img.alt}
           className="entry-main-photo"
         />
       </div>
@@ -17,17 +17,17 @@ export default function Entry({ countryData }) {
             alt="Location marker"
             className="location-marker"
           />
-          <p className="location-country-name">{countryData.country}</p>
+          <p className="location-country-name">{props.country}</p>
           <a
-            href={countryData.googleMapsLink}
+            href={props.googleMapsLink}
             target="blank"
             className="location-maps-link">
             View on Google Maps
           </a>
         </div>
-        <h2 className="country-name">{countryData.title}</h2>
-        <p className="visit-dates">{countryData.dates}</p>
-        <p className="info-text">{countryData.text}</p>
+        <h2 className="country-name">{props.title}</h2>
+        <p className="visit-dates">{props.dates}</p>
+        <p className="info-text">{props.text}</p>
       </div>
     </article>
   )
